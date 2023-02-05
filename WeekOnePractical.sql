@@ -113,6 +113,7 @@ SELECT * FROM tb_employee WHERE surName LIKE '%on%';
 
 -- 1.3
 -- Find employees whose salary is more than £2800.
+SELECT * FROM tb_employee WHERE salary > 2800;
 
 -- 1.4
 -- Find employees who work at the Morningside, Edinburgh branch.
