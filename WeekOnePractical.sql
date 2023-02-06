@@ -109,17 +109,28 @@ INSERT INTO tb_account VALUES(5, 'Current', 22.00, 5, 500.25, 2000.00, '11-jan-1
 
 -- 1.2
 -- Find employees whos Surname incudes 'on'.
-SELECT * FROM tb_employee WHERE surName LIKE '%on%';
+SELECT * 
+FROM tb_employee 
+WHERE surName LIKE '%on%';
 
 -- 1.3
 -- Find employees whose salary is more than £2800.
-SELECT * FROM tb_employee WHERE salary > 2800;
+SELECT * 
+FROM tb_employee 
+WHERE salary > 2800;
 
 -- 1.4
 -- Find employees who work at the Morningside, Edinburgh branch.
+SELECT * 
+FROM tb_employee 
+WHERE bID = (SELECT bID FROM tb_branch WHERE street = 'Morningside');
 
 -- 1.5
 -- Find employees whose supervisor is a manager.
+SELECT * 
+FROM tb_employee 
+WHERE supervisorID 
+IN (SELECT * FROM tb_employee WHERE title = 'Manager');
 
 -- 1.6 
 -- Find customers who have a current account in Morningside, edinburgh branch and the balance is
