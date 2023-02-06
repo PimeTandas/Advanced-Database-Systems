@@ -135,6 +135,9 @@ IN (SELECT * FROM tb_employee WHERE title = 'Manager');
 -- 1.6 
 -- Find customers who have a current account in Morningside, edinburgh branch and the balance is
 -- more than £2000.
+SELECT *
+FROM tb_customer
+WHERE 
 
 -- 1.7
 -- Find employees whose salart is more than  John Smith's salary at Morningside, Edinburgh branch.
