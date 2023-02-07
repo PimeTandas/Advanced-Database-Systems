@@ -205,3 +205,22 @@ omit the WHERE clause or EVERY SINGLE RECORD WILL BE UPDATED IN THE TABLE!!!!!!
     SET ContactName='Juan'
     WHERE Country='Mexico';
 */
+
+/*
+DELETE Statement.
+
+As the name suggests these are used to delete existing records from a table.
+
+    DELETE FROM (table_name)
+    WHERE (condition);
+
+Similar to UPDATE, the DELETE statement needs a WHERE clause else every single record in the table
+will be deleted... and that would be pretty shit.
+
+    DELETE FROM Customers 
+    WHERE CustomerName = 'Alfreds Futterkiste';
+
+The following statement deletes all rows in the customers table without actually deleting the table.
+
+    DELETE FROM customers;
+*/
