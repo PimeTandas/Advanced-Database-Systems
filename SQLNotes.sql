@@ -74,3 +74,56 @@ FROM (table_name);
 
 It basicly removes duplicates if your not bothered about the quantity of each result.
 */
+
+/*
+WHERE statement.
+
+The WHERE clause is used to filter records/ results. It is used to extract records that meet 
+certain conditions.
+
+WHERE clauses sytax are as followed:
+
+SELECT (column1, column2) 
+FROM (table_name)
+WHERE (condition);
+
+Example to return customers from Mexico:
+
+SELECT *
+FROM customers
+WHERE country = 'Mexico';
+
+The following operators are allowed to be used in a WHERE clause:
+-- [ = ]                Equal
+-- [ > ]                Greater than
+-- [ >= ]               Grater than or equal to 
+-- [ < ]                Less than
+-- [ <= ]               Less than or equal to 
+-- [ <> ] or [ != ]     Not equal to      
+-- [ BETWEEN ]          Between certain ranges
+-- [ LIKE ]             Check for a pattern
+-- [ IN ]               To specify and check for multiple possible values in a column
+
+The WHERE clause can be combined with multiple other WHERE clauses, using the the AND, NOT or OR 
+opperators.
+
+As with most programing languages the AND operator displays records which meet both WHERE clauses,
+(is true for both).
+
+And the OR operator displays records if any of the WHERE statments run true.
+
+Finally the NOT operator checks and returns records which are NOT true based off the WHERE clause.
+
+Some example syntaxes:
+
+WHERE condition1 AND condition2 AND condition3;
+    WHERE country = 'Germany' AND city = 'Berlin';
+
+WHERE condition1 OR condition2 OR condition3;
+    WHERE country = 'UK' or salary > 20,000;
+
+WHERE NOT condition;
+    WHERE NOT country = 'Germany';
+
+Perenthisis can be used to combine and make more complex statements/ expressions.
+*/
