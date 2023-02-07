@@ -157,3 +157,23 @@ Can even add a cheeky little DESC or ASC:
     FROM customers
     ORDER BY DESC country, ASC customerName;
 */
+
+/* 
+SQL INSERT INTO statement.
+
+This is used to insert new records into a table in a database.
+There are two possible ways to write an insert statement.
+
+1. FIRST METHOD:
+    Specify the column names and data to be inserted.
+
+    INSERT INTO customers (name, age, gender ...)
+    VALUES (value1, value2, value3...);
+
+2. SECOND METHOD:
+    The second works if you are adding values to all columns in the table. Meaning you do not need
+    to specify the columns in the INSERT part of theh statement.
+
+    INSERT INTO customers
+    VALUES (value1, value2, value3...);
+*/
