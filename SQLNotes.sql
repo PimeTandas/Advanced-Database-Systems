@@ -311,3 +311,32 @@ SUM() Function returns the sum of everything returned from a numerical column. F
     SECLECT SUM(price)
     FROM products;
 */
+
+/*
+The LIKE operator is used to look for specific patterns in a specific column.
+
+There are two wildcards that can be used in conjunction with the LIKE operator.
+
+- The Percentage Sign (%), represents zero, one or multiple characters.
+
+- The Underscore Sign (_),  represents one single character.
+
+The LIKE syntax: 
+
+    SELECT column1, column2
+    FROM customers
+    WHERE columnN LIKE pattern;
+
+Here are some examples of LIKE operations using wild cards:
+
+- WHERE CustomerName LIKE 'a%';
+    Finds any value in a column that starts with 'a'.
+
+- WHERE CustomerName LIKE '%a';
+    Finds any value in a column that ends with 'a'.
+
+- WHERE CustomerName LIKE '%or%';
+    Finds column values that contain 'or' in any position.
+
+-
+*/
