@@ -224,3 +224,46 @@ The following statement deletes all rows in the customers table without actually
 
     DELETE FROM customers;
 */
+
+/*
+The SELECT TOP, LIMIT, FETCH FIRST and ROWNUM clauses Allows us to specify the number of records to return. The SELECT TOP clause is useful when we have lots of data records, as returning to much can massivly effect performance. Not all versions of SQL support all 
+of these statements. Now lets look at each of them:
+
+- SELECT TOP:
+
+    SELECT TOP (50 | 10%) (column)
+    FROM customers
+    WHERE (condition);
+
+    SELECT TOP 3 
+    FROM customers;
+
+    SELECT TOP 3 PERCENT
+    FROM cutomers;
+
+- LIMIT:
+
+    SELECT (column)
+    FROM customers
+    WHERE (condition)
+    LIMIT number;
+
+    SELECT *
+    FROM customers
+    LIMIT 3;
+
+- FETCH:
+
+    SELECT (column)
+    FROM customers
+    WHERE (condition)
+    FETCH FIRST number ROWS ONLY;
+
+    SELECT * 
+    FROM customers
+    FETCH FIRST 3 ROWS ONLY;
+
+    SELECT * 
+    FROM customers
+    FETCH FIRST 3 PERCENT ROWS ONLY;
+*/
