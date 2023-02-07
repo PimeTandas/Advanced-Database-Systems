@@ -177,3 +177,12 @@ There are two possible ways to write an insert statement.
     INSERT INTO customers
     VALUES (value1, value2, value3...);
 */
+
+/*
+Null values is just a field with no value. If the table permits it and the value of the attrabute
+is optional then it is possible to insert a new record or update an existing one without adding a value
+to this all its fields. The field will then be saved with a null value in any spaces where a value
+was ommited.
+
+It is possible to test for null values in a WHERE clause using the IS NULL or IS NOT NULL operators.
+*/
