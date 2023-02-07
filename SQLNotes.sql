@@ -267,3 +267,47 @@ of these statements. Now lets look at each of them:
     FROM customers
     FETCH FIRST 3 PERCENT ROWS ONLY;
 */
+
+/*
+The MIN() and MAX() functions.
+
+As the name suggests MIN() returns the minium value in a given column.
+While MAX() returns the largest value in a column.
+
+- MIN()
+
+    SELECT MIN(column)
+    FROM customers
+    WHERE condition;
+
+    SELECT MIN(price)
+    FROM products
+    WHERE madein = 'China';
+
+- MAX()
+
+    SELECT MAX(column)
+    FROM customers
+    WHERE condition    
+*/
+
+/*
+COUNT(), AVG() and SUM() Functions.
+
+The COUNT() function returns the amount of records that meet a criteria. For example:
+
+    SELECT COUNT(name)
+    FROM customer
+    WHERE spend > 10000;
+
+The AVG() function returns an average value from a numerical column. For exmaple:
+
+    SELECT AVG(price)
+    FROM products
+    WHERE madein = 'UK';
+
+SUM() Function returns the sum of everything returned from a numerical column. For example:
+
+    SECLECT SUM(price)
+    FROM products;
+*/
