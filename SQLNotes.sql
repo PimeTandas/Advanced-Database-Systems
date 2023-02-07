@@ -186,3 +186,22 @@ was ommited.
 
 It is possible to test for null values in a WHERE clause using the IS NULL or IS NOT NULL operators.
 */
+
+/* 
+UPDATE Statement.
+
+An update statment as it sounds is used to update preesiting records in a database.
+
+The statments syntax is:
+
+    UPDATE (table_name)
+    SET column1 = value1, column2 = value2, column3 = value3
+    WHERE (condition);
+
+Here the WHERE clause is used to specify which records to UPDATE/ change. Dont be a supid idiot and 
+omit the WHERE clause or EVERY SINGLE RECORD WILL BE UPDATED IN THE TABLE!!!!!!
+
+    UPDATE Customers
+    SET ContactName='Juan'
+    WHERE Country='Mexico';
+*/
