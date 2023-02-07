@@ -116,14 +116,44 @@ Finally the NOT operator checks and returns records which are NOT true based off
 
 Some example syntaxes:
 
-WHERE condition1 AND condition2 AND condition3;
-    WHERE country = 'Germany' AND city = 'Berlin';
+    WHERE condition1 AND condition2 AND condition3;
+        WHERE country = 'Germany' AND city = 'Berlin';
 
-WHERE condition1 OR condition2 OR condition3;
-    WHERE country = 'UK' or salary > 20,000;
+    WHERE condition1 OR condition2 OR condition3;
+        WHERE country = 'UK' or salary > 20,000;
 
-WHERE NOT condition;
-    WHERE NOT country = 'Germany';
+    WHERE NOT condition;
+        WHERE NOT country = 'Germany';
 
 Perenthisis can be used to combine and make more complex statements/ expressions.
+*/
+
+/*
+ORDER BY Keyword.
+The ORDER BY keyword is used to sort the result-set into ascending or desending order. By deault
+ascending. To change this to decending use the aditional DESC keyword. Typically this ORDER BY
+keyword is wrote after the WHERE clause if there is one. See bellow:
+
+    SELECT *
+    FROM customers
+    SORT BY country;
+
+    OR
+
+    SELECT *
+    FROM customers
+    SORT BY country DESC; 
+
+Ordering by several different columns, The following orders by country first, but if multiple records
+have the same country, then they are further ordered by customer name:
+
+    SELECT *
+    FROM customers
+    ORDER BY country, customerName;
+
+Can even add a cheeky little DESC or ASC:
+
+    SELECT *
+    FROM customers
+    ORDER BY DESC country, ASC customerName;
 */
