@@ -338,5 +338,27 @@ Here are some examples of LIKE operations using wild cards:
 - WHERE CustomerName LIKE '%or%';
     Finds column values that contain 'or' in any position.
 
--
+- WHERE CustomerName LIKE '_r%';
+    Finds an r in the second position.
+
+- WHERE CustomerName LIKE 'a_%';
+    Finds items which begin with 'a' and are at least 2 characters in length.
+
+- WHERE CustomerName LIKE 'a__%';
+    Finds values which begin with 'a' and are at least 3 characters in length.
+
+- WHERE CustomerName LIKE 'a%o';
+    Finds values which begin with 'a' are any length and end with 'o';
 */
+
+/*
+Wild cards as mentioned before are used to substitue one or more characters in a string. Wild card characters are used along with a LIKE operator in a WHERE clause. To find specific patterns in a column.
+Along with the ones mentioned before there is also the [CHARLIST] wild card.
+
+The following statment selects all citys that start with any of the following letters, 'b', 's' or 'p':
+
+    SELECT *
+    FROM Customer
+    WHERE city LIKE '[bsp]%';
+
+    
