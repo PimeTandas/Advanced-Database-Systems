@@ -310,7 +310,7 @@ SUM() Function returns the sum of everything returned from a numerical column. F
 
     SECLECT SUM(price)
     FROM products;
-*/
+*/ 
 
 /*
 The LIKE operator is used to look for specific patterns in a specific column.
