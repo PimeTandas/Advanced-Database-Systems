@@ -358,7 +358,65 @@ Along with the ones mentioned before there is also the [CHARLIST] wild card.
 The following statment selects all citys that start with any of the following letters, 'b', 's' or 'p':
 
     SELECT *
-    FROM Customer
+    FROM customer
     WHERE city LIKE '[bsp]%';
 
+This code bellow selects all citys that begin with any of the letters 'a' through to 'z':
     
+    SELECT *
+    FROM customer
+    WHERE city LIKE '[a-z]%';
+
+While there is a [CHARLIST] wild card syntax there is also a [!CHARLIST] wild card. This returns items that do not begin with 'b', 's', 'p' or in the second one 'a' through to 'z'.
+
+    SELECT *
+    FROM customer
+    WHERE city LIKE '[!bsp]%';
+
+    OR 
+
+    SELECT *
+    FROM customer
+    WHERE city LIKE '[!a-z]%';
+
+*/
+
+/*
+The IN operator:
+    This allows you specify multiple values in a WHERE clause. It can be considered the short hand for multiple OR statments.
+
+The sytax is as followed:
+    
+    SELECT *
+    FROM citys
+    WHERE name IN (value1, value2, value3...)
+
+    OR
+
+    SELECT * 
+    FROM citys
+    WHERE name IN (another SELECT statement...)
+*/
+
+/*
+Another useful operator is the BETWEEN one.
+This allows us to select values in a certain range. These values can be numbers, text or even dates. The BETWEEN operator is incusive meaning both begining and end values are included. The syntax looks like:
+
+    SELECT *
+    FROM customers
+    WHERE columnName BETWEEN value1 AND value2;
+
+As there is a between operator it makes sense for their to be a NOT BETWEEN operator (which there is).
+
+    SELECT *
+    FROM customers
+    WHERE columnName NOT BETWEEN value1 AND value2;
+
+*/
+
+/*
+SQL Aliases are used to give tables or columns in tables temporary names. They are often used to make tables or new columns more reable and easier to understand. It is important to note that the aliase only exists for the duration of that query. They are created using
+the AS keyword. See bellow:
+
+
+*/
